@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   This is some basic info about the whole test suit
+Documentation   This is some basic info about the whole test suite of infotiv rental car webpage
 Resource        ../Resources/keywords.robot
 Library         SeleniumLibrary
 Test Setup      Begin Web Test
@@ -8,18 +8,22 @@ Test Teardown   End Web Test
 
 *** Variables ***
 ${BROWSER} =  chrome
-${URL} =  http://rental33.infotiv.net/webpage/html/gui/about.php
+${URL} =     http://rental33.infotiv.net/
 
 
 *** Test Cases ***
-user can conduct a search and add to cart
+user can access infotiv home page
     [Documentation]             This is some basic info about the test
-    [Tags]                      Test HomePage
-    Begin Web Test
-    Go To Web Page
+    [Tags]                      Test Header
     Load Page
-    Verify Page Loaded
+    Verify title of Home page is clickable
+    Verify Logo is clickable
 
+user can able to select Date
+    [Documentation]             This is some basic info about the test
+     [Tags]                      Test DateSelection
+     Load Page
+     Verify input start date Selection
 
 
 
