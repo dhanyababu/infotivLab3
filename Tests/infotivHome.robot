@@ -19,11 +19,24 @@ user can access infotiv home page
     Verify title of Home page is clickable
     Verify Logo is clickable
 
-user can able to select Date
+User Should not be able to login with wrong credentials
+    [Documentation]             This is some basic info about the test
+    [Tags]                      Test InvalidLogin
+    Load Page
+    Verify Login With wrong credentials
+    Submit Login
+
+
+Verify start date Selection and verification
     [Documentation]             This is some basic info about the test
      [Tags]                      Test DateSelection
-     Load Page
-     Verify input start date Selection
+    Load Page
+    Verify Default Date is diplayed and it is current date
+    Verify The Min Date For The Start Date
+    Verify The Max Date For The Start Date
+    Verify Less A Day From Min Date (Invalid) For The Start Date
+    Verify Add A Day To Max Date (Invalid) For the Start Date
+
 
 
 
